@@ -90,7 +90,7 @@ export default function Sidebar() {
   };
 
   return (
-    <div className="w-64 h-screen bg-gray-100 border-r border-gray-300">
+    <div className="w-full h-screen bg-gray-100 border-r border-gray-300">
       {/* Header */}
       <div className="flex items-center justify-center h-14 bg-gray-200 border-b border-gray-300">
         <h1 className="text-lg font-semibold text-gray-700">Explorer</h1>
