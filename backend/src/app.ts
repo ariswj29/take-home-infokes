@@ -11,7 +11,7 @@ app.use(express.urlencoded({ extended: true }));
 app.use(routers);
 
 app.get("/", (req, res) => {
-  res.send("Selamat Datang Di REST API Poolapack Siswa!");
+  res.send("Selamat Datang Di REST API Window Explorer!");
 });
 
 app.listen(port, () => {
