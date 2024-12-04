@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "This PC",
+    "level": 0,
+    "type": "computer",
+    "parentId": null
+  },
+  {
+    "id": 2,
+    "name": "Local Disk (C:)",
+    "level": 1,
+    "type": "disk",
+    "parentId": 1
+  },
+  {
+    "id": 3,
+    "name": "Local Disk (D:)",
+    "level": 1,
+    "type": "disk",
+    "parentId": 1
+  },
+  {
+    "id": 4,
+    "name": "Users",
+    "level": 2,
+    "type": "folder",
+    "parentId": 2
+  },
+  {
+    "id": 5,
+    "name": "Program Files",
+    "level": 2,
+    "type": "folder",
+    "parentId": 2
+  },
+  {
+    "id": 6,
+    "name": "Public",
+    "level": 3,
+    "type": "folder",
+    "parentId": 4
+  },
+  {
+    "id": 7,
+    "name": "Documents",
+    "level": 2,
+    "type": "folder",
+    "parentId": 3
+  },
+  {
+    "id": 8,
+    "name": "Downloads",
+    "level": 2,
+    "type": "folder",
+    "parentId": 3
+  }
+]

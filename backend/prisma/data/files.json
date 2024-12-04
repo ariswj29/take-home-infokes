@@ -1,0 +1,106 @@
+[
+  {
+    "id": 1,
+    "name": "Recycle Bin",
+    "type": "exe",
+    "path": null,
+    "size": 121,
+    "folderId": 5
+  },
+  {
+    "id": 2,
+    "name": "Google Chrome",
+    "type": "exe",
+    "path": null,
+    "size": 2931,
+    "folderId": 5
+  },
+  {
+    "id": 3,
+    "name": "CV - Aris Wildan Jannatan",
+    "type": "pdf",
+    "path": null,
+    "size": 454,
+    "folderId": 7
+  },
+  {
+    "id": 4,
+    "name": "Job Application Tracker",
+    "type": "xslx",
+    "path": null,
+    "size": 9123,
+    "folderId": 7
+  },
+  {
+    "id": 5,
+    "name": "Surat Lamaran - PT. X",
+    "type": "pdf",
+    "path": null,
+    "size": 323,
+    "folderId": 8
+  },
+  {
+    "id": 6,
+    "name": "Surat Lamaran - PT. Y",
+    "type": "pdf",
+    "path": null,
+    "size": 348,
+    "folderId": 8
+  },
+  {
+    "id": 7,
+    "name": "Web Developer take home test",
+    "type": "docx",
+    "path": null,
+    "size": 939,
+    "folderId": 8
+  },
+  {
+    "id": 8,
+    "name": "icon-folder",
+    "type": "png",
+    "path": "icon-folder.png",
+    "size": 411,
+    "folderId": 8
+  },
+  {
+    "id": 9,
+    "name": "icon-pdf",
+    "type": "png",
+    "path": "icon-pdf.png",
+    "size": 412,
+    "folderId": 8
+  },
+  {
+    "id": 10,
+    "name": "icon-xslx",
+    "type": "png",
+    "path": "icon-xslx.png",
+    "size": 413,
+    "folderId": 8
+  },
+  {
+    "id": 11,
+    "name": "icon-docx",
+    "type": "png",
+    "path": "icon-docx.png",
+    "size": 414,
+    "folderId": 8
+  },
+  {
+    "id": 12,
+    "name": "icon-png",
+    "type": "png",
+    "path": "icon-png.png",
+    "size": 414,
+    "folderId": 8
+  },
+  {
+    "id": 13,
+    "name": "icon-exe",
+    "type": "png",
+    "path": "icon-exe.png",
+    "size": 414,
+    "folderId": 8
+  }
+]
