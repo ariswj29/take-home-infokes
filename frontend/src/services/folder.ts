@@ -11,3 +11,10 @@ export const getFolderByParentId = async (parentId: string) => {
   const response = await axios.get(`${base_url_api}/folder/${parentId}`);
   return response.data;
 };
+
+export const getBreadcrumb = async (parentId: string) => {
+  const response = await axios.get(
+    `${base_url_api}/folder/breadcrumb/${parentId}`
+  );
+  return response.data;
+};

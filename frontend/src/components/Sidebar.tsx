@@ -2,6 +2,7 @@
 
 import { getFolders } from "@/services/folder";
 import { Folder } from "@/types/interface";
+import Link from "next/link";
 import { useEffect, useState } from "react";
 import { AiOutlineRight, AiOutlineDown } from "react-icons/ai";
 import { BsFolder, BsFolder2Open } from "react-icons/bs";
@@ -64,11 +65,8 @@ export default function Sidebar() {
       .filter((folder) => folder.parentId === parentId)
       .map((folder) => (
         <li key={folder.id}>
-          <div
-            className="flex items-center space-x-2 px-2 py-1 hover:bg-gray-200 cursor-pointer rounded"
-            onClick={() => toggleFolder(folder.id)}
-          >
-            <span>
+          <div className="flex items-center space-x-2 px-2 py-1 hover:bg-gray-200 cursor-pointer rounded">
+            <span onClick={() => toggleFolder(folder.id)}>
               {folders.some((child) => child.parentId === folder.id) ? (
                 openFolders[folder.id] ? (
                   <AiOutlineDown />
@@ -79,8 +77,10 @@ export default function Sidebar() {
                 <AiOutlineRight className="invisible" />
               )}
             </span>
-            <span>{getIconByType(folder.type, openFolders[folder.id])}</span>
-            <span>{folder.name}</span>
+            <Link href={"/" + folder.id} className="flex items-center gap-2">
+              <span>{getIconByType(folder.type, openFolders[folder.id])}</span>
+              <span>{folder.name}</span>
+            </Link>
           </div>
           {openFolders[folder.id] && (
             <ul className="pl-6">{renderFolders(folder.id)}</ul>

@@ -1,10 +1,10 @@
 import {
   BsFileEarmark,
-  BsFileEarmarkBinary,
   BsFileEarmarkImage,
   BsFileEarmarkPdf,
   BsFileEarmarkSpreadsheet,
   BsFileEarmarkText,
+  BsFileEarmarkZip,
   BsFolder,
 } from "react-icons/bs";
 
@@ -14,10 +14,7 @@ export default function IconFile({ type }: { type: string }) {
       return <BsFolder className="text-blue-500 text-4xl mb-4" size={50} />;
     case "exe":
       return (
-        <BsFileEarmarkBinary
-          className="text-blue-500 text-4xl mb-4"
-          size={50}
-        />
+        <BsFileEarmarkZip className="text-blue-500 text-4xl mb-4" size={50} />
       );
     case "pdf":
       return (

@@ -7,13 +7,11 @@ import { useEffect, useState } from "react";
 import { BsFolder } from "react-icons/bs";
 import { useParams } from "next/navigation";
 import IconFile from "@/utils/icon-file";
-import FilePhoto from "@/utils/file-photo";
 
 export default function Folder() {
   const params = useParams();
   const [folders, setFolders] = useState<Folder[]>([]);
   const [file, setFile] = useState<File[]>([]);
-  console.log(params, "params");
 
   useEffect(() => {
     const fetchData = async () => {
