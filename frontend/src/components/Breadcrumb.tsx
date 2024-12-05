@@ -5,15 +5,15 @@ export default function Breadcrumb() {
     // buatkan breadcrumb menggunakan tailwind css
     <div className="flex items-center gap-2 py-2 px-2 text-sm border border-slate-400">
       <Link href="/">
-        <span className="hover:bg-cyan-200">This PC</span>
+        <span className="hover:bg-cyan-100">This PC</span>
       </Link>
       <span>{">"}</span>
       <Link href="/2">
-        <span className="hover:bg-cyan-200">Local Disk (C:)</span>
+        <span className="hover:bg-cyan-100">Local Disk (C:)</span>
       </Link>
       <span>{">"}</span>
       <Link href="/2/4">
-        <span className="hover:bg-cyan-200">Users</span>
+        <span className="hover:bg-cyan-100">Users</span>
       </Link>
     </div>
   );

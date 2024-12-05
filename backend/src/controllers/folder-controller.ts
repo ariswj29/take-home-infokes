@@ -23,12 +23,16 @@ export const getFolderByParentId = async (req: Request, res: Response) => {
       },
     });
 
-    res
-      .status(200)
-      .json({
-        message: "Get data folder by parent successfully",
-        data: folder,
-      });
+    const file = await prisma.file.findMany({
+      where: {
+        folderId: parseInt(parentId),
+      },
+    });
+
+    res.status(200).json({
+      message: "Get data folder and file by parent successfully",
+      data: { folder, file },
+    });
   } catch (error) {
     res.status(500).json({ message: (error as Error).message });
   }

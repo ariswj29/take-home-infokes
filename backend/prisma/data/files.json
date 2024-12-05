@@ -26,7 +26,7 @@
   {
     "id": 4,
     "name": "Job Application Tracker",
-    "type": "xslx",
+    "type": "xlsx",
     "path": null,
     "size": 9123,
     "folderId": 7

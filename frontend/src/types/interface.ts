@@ -8,3 +8,15 @@ export interface Folder {
   updatedAt: string;
   deletedAt: string | null;
 }
+
+export interface File {
+  id: number;
+  name: string;
+  size: number;
+  path: string;
+  type: string;
+  folderId: number;
+  createdAt: string;
+  updatedAt: string;
+  deletedAt: string | null;
+}
