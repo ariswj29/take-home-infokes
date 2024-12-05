@@ -7,12 +7,17 @@ export const getFolders = async () => {
   return response.data;
 };
 
-export const getFolderByParentId = async (parentId: string) => {
-  const response = await axios.get(`${base_url_api}/folder/${parentId}`);
+export const getFolderByParentId = async (
+  parentId: number,
+  search?: string
+) => {
+  const response = await axios.get(`${base_url_api}/folder/${parentId}`, {
+    params: { search },
+  });
   return response.data;
 };
 
-export const getBreadcrumb = async (parentId: string) => {
+export const getBreadcrumb = async (parentId: number) => {
   const response = await axios.get(
     `${base_url_api}/folder/breadcrumb/${parentId}`
   );

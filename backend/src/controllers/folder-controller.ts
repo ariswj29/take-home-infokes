@@ -15,17 +15,24 @@ export const getFolder = async (req: Request, res: Response) => {
 
 export const getFolderByParentId = async (req: Request, res: Response) => {
   const { parentId } = req.params;
+  const { search } = req.query;
 
   try {
     const folder = await prisma.folder.findMany({
       where: {
         parentId: parseInt(parentId),
+        name: {
+          contains: search ? String(search) : "",
+        },
       },
     });
 
     const file = await prisma.file.findMany({
       where: {
         folderId: parseInt(parentId),
+        name: {
+          contains: search ? String(search) : "",
+        },
       },
     });
 
@@ -72,6 +79,10 @@ export const getBreadcrumb = async (req: Request, res: Response) => {
     }
 
     breadcrumb.shift(); // Hapus elemen pertama dari breadcrumb
+
+    if (breadcrumb.length === 0) {
+      breadcrumb.unshift({ name: "This PC", id: 1 });
+    }
 
     res.status(200).json({
       message: "Get breadcrumb successfully",

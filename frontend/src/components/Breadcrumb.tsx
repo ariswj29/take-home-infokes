@@ -12,7 +12,7 @@ export default function Breadcrumb() {
 
   useEffect(() => {
     const fetchData = async () => {
-      const response = await getBreadcrumb(params.id as string);
+      const response = await getBreadcrumb(params.id ? Number(params.id) : 1);
       console.log(response.data);
       setBreadcrumbs(response.data);
     };
