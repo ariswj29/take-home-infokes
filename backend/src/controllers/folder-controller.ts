@@ -15,7 +15,7 @@ export const getFolder = async (req: Request, res: Response) => {
 
 export const getFolderByParentId = async (req: Request, res: Response) => {
   const { parentId } = req.params;
-  const { search } = req.query;
+  const { search, sort } = req.query;
 
   try {
     const folder = await prisma.folder.findMany({
@@ -25,6 +25,9 @@ export const getFolderByParentId = async (req: Request, res: Response) => {
           contains: search ? String(search) : "",
         },
       },
+      orderBy: {
+        name: sort ? (sort as "asc" | "desc") : "asc",
+      },
     });
 
     const file = await prisma.file.findMany({
@@ -33,6 +36,9 @@ export const getFolderByParentId = async (req: Request, res: Response) => {
         name: {
           contains: search ? String(search) : "",
         },
+      },
+      orderBy: {
+        name: sort ? (sort as "asc" | "desc") : "asc",
       },
     });
 
@@ -86,7 +92,7 @@ export const getBreadcrumb = async (req: Request, res: Response) => {
 
     res.status(200).json({
       message: "Get breadcrumb successfully",
-      data: breadcrumb, // Kembalikan array objek breadcrumb
+      data: breadcrumb,
     });
   } catch (error) {
     res.status(500).json({

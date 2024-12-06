@@ -8,7 +8,13 @@ import { useParams } from "next/navigation";
 import { useEffect, useState } from "react";
 import { BsFolder, BsHdd } from "react-icons/bs";
 
-export default function Home({ searchQuery }: { searchQuery: string }) {
+export default function Home({
+  searchQuery,
+  sort,
+}: {
+  searchQuery: string;
+  sort: string;
+}) {
   const params = useParams();
   const [folders, setFolders] = useState<Folder[]>([]);
   const [files, setFiles] = useState<File[]>([]);
@@ -18,7 +24,8 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
     const fetchData = async () => {
       const response = await getFolderByParentId(
         params.id ? Number(params.id) : 1,
-        searchQuery
+        searchQuery,
+        sort
       );
       console.log(response.data);
       setFolders(response.data.folder);
@@ -26,7 +33,7 @@ export default function Home({ searchQuery }: { searchQuery: string }) {
     };
 
     fetchData();
-  }, [params?.id, searchQuery]);
+  }, [params?.id, searchQuery, sort]);
 
   return (
     <div className="flex flex-wrap gap-4 p-4">

@@ -9,10 +9,11 @@ export const getFolders = async () => {
 
 export const getFolderByParentId = async (
   parentId: number,
-  search?: string
+  search?: string,
+  sort?: string
 ) => {
   const response = await axios.get(`${base_url_api}/folder/${parentId}`, {
-    params: { search },
+    params: { search, sort },
   });
   return response.data;
 };

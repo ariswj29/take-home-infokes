@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { use, useEffect, useState } from "react";
 import "./globals.css";
 import Sidebar from "@/components/Sidebar";
 import Toolbar from "@/components/Toolbar";
@@ -12,7 +12,12 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   const [searchQuery, setSearchQuery] = useState("");
+  const [sort, setSort] = useState("asc");
   console.log(searchQuery, "search layout");
+
+  useEffect(() => {
+    document.title = "Explorer";
+  }, []);
 
   return (
     <html lang="en">
@@ -22,10 +27,9 @@ export default function RootLayout({
             <Sidebar />
           </div>
           <div className="col-span-4">
-            <Toolbar setSearchQuery={setSearchQuery} />
+            <Toolbar setSearchQuery={setSearchQuery} setSort={setSort} />
             <div>
-              {/* Clone children and pass searchQuery */}
-              <Home searchQuery={searchQuery} />
+              <Home searchQuery={searchQuery} sort={sort} />
             </div>
           </div>
         </div>
