@@ -5,10 +5,15 @@
 
 ## Getting started
 
+- Awalan
+
+```
+git pull https://github.com/ariswj29/take-home-infokes.git
+```
+
 - Untuk Backend
 
 ```
-git pull https://gitlab.com/ariswj/aris_071124.git
 cd backend
 npm install
 ---------------
@@ -25,7 +30,6 @@ npm run start
 - Untuk Frontend
 
 ```
-git pull https://gitlab.com/ariswj/aris_071124.git
 cd frontend
 npm install
 ---------------
